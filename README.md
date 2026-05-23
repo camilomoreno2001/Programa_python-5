@@ -1,54 +1,42 @@
-# Programa_python-5
-programacion problema 5 
-# ==================================================================================
-# CURSO: FUNDAMENTOS DE PROGRAMACIÓN
-# FASE 5: EVALUACIÓN FINAL POA
-# ESTUDIANTE: CRISTIAN CAMILO MORENO GÓMEZ
-# PROBLEMA SELECCIONADO: PROBLEMA 5 – CONTROL DE HORAS LABORALES
-# ==================================================================================
+# Programa Python – Fase 5 Evaluación Final POA
 
-# MATRIZ DE DATOS
-# [Nombre, Lunes, Martes, Miércoles, Jueves, Viernes]
+## Curso
+Fundamentos de Programación  
+Código: 213022
 
-recursos = [
-    ["Carlos", 8, 8, 9, 8, 10],
-    ["María", 7, 8, 8, 7, 8],
-    ["Juan", 10, 9, 8, 9, 10],
-    ["Luisa", 6, 7, 8, 7, 6]
-]
+## Estudiante
+Cristian Camilo Moreno Gómez
 
-UMBRAL_HORAS = 40
+## Problema Seleccionado
+Problema 5 – Control de Horas Laborales.
 
-# FUNCIÓN PARA CALCULAR HORAS Y CLASIFICACIÓN
+## Descripción del Programa
 
-def calcular_jornada(datos_recurso):
+Este programa desarrollado en Python permite calcular las horas semanales trabajadas por un equipo de recursos durante la semana.
 
-    nombre = datos_recurso[0]
+La solución utiliza una matriz con los datos de los trabajadores y sus horas laborales de lunes a viernes.
 
-    total_horas = sum(datos_recurso[1:])
+El programa realiza las siguientes funciones:
 
-    if total_horas > UMBRAL_HORAS:
-        clasificacion = "Sobretiempo"
-    else:
-        clasificacion = "Horario Estándar"
+- Calcula el total de horas semanales por recurso.
+- Clasifica la jornada laboral.
+- Determina si el trabajador presenta "Sobretiempo" cuando supera las 40 horas.
+- Clasifica como "Horario Estándar" cuando no supera el umbral establecido.
 
-    return nombre, total_horas, clasificacion
+## Estructuras Utilizadas
 
+- Variables
+- Matrices (listas)
+- Funciones
+- Estructura condicional if – else
+- Ciclo for
+- Función integrada sum()
 
-# PROGRAMA PRINCIPAL
+## Archivo Principal
 
-def main():
+problema5.py
 
-    print("=== REPORTE DE HORAS SEMANALES ===")
+## Repositorio GitHub
 
-    for recurso in recursos:
+Repositorio creado para la actividad Fase 5 – Evaluación Final POA.
 
-        nombre, total, jornada = calcular_jornada(recurso)
-
-        print("\n-----------------------------")
-        print("Nombre:", nombre)
-        print("Total semanal:", total)
-        print("Clasificación:", jornada)
-
-if __name__ == "__main__":
-    main()
